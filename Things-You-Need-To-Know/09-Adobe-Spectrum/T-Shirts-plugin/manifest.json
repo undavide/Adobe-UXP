@@ -1,0 +1,67 @@
+{
+  "id": "com.davidebarranca.uxpspectrumexample",
+  "name": "UXP Spectrum example",
+  "version": "1.0.0",
+  "main": "index.html",
+  "host": [
+    {
+      "app": "PS",
+      "minVersion": "22.0.0"
+    }
+  ],
+  "manifestVersion": 4,
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "vanilla",
+      "minimumSize": {
+        "width": 230,
+        "height": 20
+      },
+      "maximumSize": {
+        "width": 320,
+        "height": 690
+      },
+      "preferredDockedSize": {
+        "width": 320,
+        "height": 690
+      },
+      "preferredFloatingSize": {
+        "width": 320,
+        "height": 690
+      },
+      "label": {
+        "default": "Starter Panel"
+      }
+    }
+  ],
+  "icons": [
+    {
+      "width": 23,
+      "height": 23,
+      "path": "icons/dark.png",
+      "scale": [
+        1,
+        2
+      ],
+      "theme": [
+        "darkest",
+        "dark",
+        "medium"
+      ]
+    },
+    {
+      "width": 23,
+      "height": 23,
+      "path": "icons/light.png",
+      "scale": [
+        1,
+        2
+      ],
+      "theme": [
+        "lightest",
+        "light"
+      ]
+    }
+  ]
+}

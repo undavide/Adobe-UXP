@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="index.js"></script>
+<style>
+body { margin: 0; padding: 0; height: 100vh; }
+
+.column, .row {
+	padding: 10px 15px;
+	justify-content: space-between;
+}
+
+.border {
+	margin: 0 15px;
+	border-radius: 4px;
+	border: 1px solid #888;
+}
+
+@media (prefers-color-scheme: dark),
+(prefers-color-scheme: darkest) {
+	.money {
+		fill: rgb(51, 171, 132);
+	}
+}
+
+@media (prefers-color-scheme: light),
+(prefers-color-scheme: lightest) {
+	.money {
+		fill: rgb(18, 128, 92);
+	}
+}
+</style>
+</head>
+
+<body>
+	<div class="column">
+		<sp-heading>Sample Spectrum plugin</sp-heading>
+		<sp-divider size="large"></sp-divider>
+	</div>
+	<div class="column">
+		<sp-body>Just an example of the Spectrum widgets that you're allowed to use in your own plugins...</sp-body>
+	</div>
+	<div class="column border">
+		<sp-detail slot="label">MAKE SOME CHOICES</sp-detail>
+
+		<sp-slider variant="filled" min="1" max="10" value="3" id="order">
+			<sp-label slot="label">How many T-Shirts do you want?</sp-label>
+		</sp-slider>
+
+		<sp-radio-group id="size">
+			<sp-label slot="label">Pick your size:</sp-label>
+			<sp-radio value="XL">XL</sp-radio>
+			<sp-radio value="L" checked>L</sp-radio>
+			<sp-radio value="M">M</sp-radio>
+			<sp-radio value="S">S</sp-radio>
+			<sp-radio value="XS">XS</sp-radio>
+		</sp-radio-group>
+
+		<sp-dropdown placeholder="Select the color" id="color">
+    <sp-menu slot="options">
+        <sp-menu-item value="blue">Blue</sp-menu-item>
+        <sp-menu-item value="teal">Teal</sp-menu-item>
+        <sp-menu-item value="green">Green</sp-menu-item>
+        <sp-menu-item value="purple" disabled>Purple (out of stock)</sp-menu-item>
+    </sp-menu>
+	</sp-dropdown>
+	<img src="img/default.jpg" width="200" style="margin: 10px auto; border-radius: 4px" id="shirt-img">
+
+	<sp-textfield placeholder="UXP 🚀" id="message" style="width: 100%">
+		<sp-label slot="label">Shirt personalized text (optional)</sp-label>
+	</sp-textfield>
+
+	</div>
+	<div class="row">
+		<sp-action-button disabled>Give back</sp-action-button>
+		<sp-action-button disabled>Complain</sp-action-button>
+		<sp-action-button id="buy">
+			<div slot="icon" class="money" style="margin-left:8px">
+				<svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 18 18" width="18">
+					<rect id="Canvas" fill="#ff13dc" opacity="0" width="18" height="18" />
+					<circle cx="11" cy="7" r="2" />
+					<path d="M4,10.5v-7A.5.5,0,0,1,4.5,3h13a.5.5,0,0,1,.5.5v7a.5.5,0,0,1-.5.5H4.5A.5.5,0,0,1,4,10.5ZM17,5.8285A3.008,3.008,0,0,1,15.1715,4H6.8285A3.00753,3.00753,0,0,1,5,5.8285v2.343A3.008,3.008,0,0,1,6.8285,10h8.343A3.00753,3.00753,0,0,1,17,8.1715Z" />
+					<path d="M16.5,13H2.5a.5.5,0,0,1-.5-.5v-8A.5.5,0,0,1,2.5,4H3v8H17v.5A.5.5,0,0,1,16.5,13Z" />
+					<path d="M14.5,15H.5a.5.5,0,0,1-.5-.5v-8A.5.5,0,0,1,.5,6H1v8H15v.5A.5.5,0,0,1,14.5,15Z" />
+				</svg>
+			</div>
+			Purchase
+		</sp-action-button>
+	</div>
+</body>
+</html>
