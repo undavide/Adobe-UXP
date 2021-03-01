@@ -1,0 +1,67 @@
+{
+  "id": "com.davidebarranca.dialogs",
+  "name": "UXP Dialogs",
+  "version": "1.0.0",
+  "main": "index.html",
+  "host": [
+    {
+      "app": "PS",
+      "minVersion": "22.0.0"
+    }
+  ],
+  "manifestVersion": 4,
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "dialogs",
+      "minimumSize": {
+        "width": 280,
+        "height": 250
+      },
+      "maximumSize": {
+        "width": 2000,
+        "height": 2000
+      },
+      "preferredDockedSize": {
+        "width": 280,
+        "height": 250
+      },
+      "preferredFloatingSize": {
+        "width": 280,
+        "height": 250
+      },
+      "label": {
+        "default": "UXP Dialogs"
+      }
+    }
+  ],
+  "icons": [
+    {
+      "width": 23,
+      "height": 23,
+      "path": "icons/dark.png",
+      "scale": [
+        1,
+        2
+      ],
+      "theme": [
+        "darkest",
+        "dark",
+        "medium"
+      ]
+    },
+    {
+      "width": 23,
+      "height": 23,
+      "path": "icons/light.png",
+      "scale": [
+        1,
+        2
+      ],
+      "theme": [
+        "lightest",
+        "light"
+      ]
+    }
+  ]
+}
