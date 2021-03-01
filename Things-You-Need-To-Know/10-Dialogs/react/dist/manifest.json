@@ -1,0 +1,73 @@
+{
+  "id": "com.davidebarranca.reactdialogs",
+  "name": "UXP React Dialogs",
+  "version": "1.0.0",
+  "main": "index.html",
+  "manifestVersion": 4,
+  "host": [
+    {
+      "app": "PS",
+      "minVersion": "22.0.0"
+    }
+  ],
+  "entrypoints": [
+    
+    {
+      "type": "panel",
+      "id": "dialogs",
+      "label": {
+        "default": "UXP React Dialogs"
+      },
+      "minimumSize": {
+        "width": 320,
+        "height": 250
+      },
+      "maximumSize": {
+        "width": 2000,
+        "height": 2000
+      },
+      "preferredDockedSize": {
+        "width": 320,
+        "height": 250
+      },
+      "preferredFloatingSize": {
+        "width": 420,
+        "height": 250
+      }
+    }
+  ],
+  "icons": [
+    {
+      "width": 32,
+      "height": 32,
+      "path": "icons/icon_D.png",
+      "scale": [
+        1,
+        2
+      ],
+      "theme": [
+        "dark",
+        "darkest"
+      ],
+      "species": [
+        "generic"
+      ]
+    },
+    {
+      "width": 32,
+      "height": 32,
+      "path": "icons/icon_N.png",
+      "scale": [
+        1,
+        2
+      ],
+      "theme": [
+        "lightest",
+        "light"
+      ],
+      "species": [
+        "generic"
+      ]
+    }
+  ]
+}
