@@ -5,9 +5,7 @@
 	<script src="index.js"></script>
 </head>
 <style>
-	body {
-		padding: 0 16px;
-	}
+	body { padding: 0 16px; }
 </style>
 
 <body>
@@ -15,7 +13,8 @@
 	<sp-heading>Dialog examples</sp-heading>
 	<sp-divider size="large" style="margin-bottom:10px"></sp-divider>
 	<sp-body>
-		Two different ways to create modal dialogs.<br />Please note that Spectrum Dialogs API is still a work in progress.
+		Two different ways to create modal dialogs.<br />
+    Please note that Spectrum Dialogs API is still a work in progress.
 	</sp-body>
 
 	<div class="row" style="margin: 20px; justify-content: space-around;">
@@ -30,11 +29,19 @@
 	<dialog id="dialog">
 		<sp-heading size="L" style="margin: 0">👋🏻 Hello there!</sp-heading>
 		<sp-divider size="large" style="margin:10px 0"></sp-divider>
-		<sp-body>This is a rich modal dialog where you can use all the available UI elements in UXP.</sp-body>
+		<sp-body>
+      This is a rich modal dialog where you can use all the available UI elements in UXP.
+    </sp-body>
 		<img src="img/UXP.png" width="400">
 		<div class="row" style="justify-content: flex-end; margin-top:30px">
-			<sp-button variant="secondary" style="margin-right:10px" onclick="document.querySelector('#dialog').close('NOPE')">Cancel</sp-button>
-			<sp-button variant="primary" onclick="document.querySelector('#dialog').close('OK')">Ok</sp-button>
+			<sp-button variant="secondary" style="margin-right:10px" 
+                 onclick="document.querySelector('#dialog').close('NOPE')">
+        Cancel
+      </sp-button>
+			<sp-button variant="primary" 
+                 onclick="document.querySelector('#dialog').close('OK')">
+        Ok
+      </sp-button>
 			<!-- ESC will return "reasonCanceled" -->
 		</div>
 	</dialog>
@@ -42,12 +49,16 @@
 	<sp-dialog id="sp-dialog">
 		<sp-heading slot="title" style="margin: 0">Use with caution!</sp-heading>
 		<sp-icon slot="icon" style="color: #ec5b62" size="m" name="ui:AlertSmall"></sp-icon>
-		<sp-body slot="description">Spectrum Dialogs are still undocumented, yet available in PS-release.<br />Be aware that this possibility exists and keep an eye on the Documentation.</sp-body>
+		<sp-body slot="description">Spectrum Dialogs are still undocumented, yet available in PS-release.<br />
+      Be aware that this possibility exists and keep an eye on the Documentation.
+    </sp-body>
 		<sp-button-group slot="buttongroup">
-			<sp-button variant="primary" onclick="document.querySelector('#sp-dialog').removeAttribute('open')">Ok</sp-button>
+			<sp-button variant="primary" 
+                 onclick="document.querySelector('#sp-dialog').removeAttribute('open')">
+        Ok
+      </sp-button>
 		</sp-button-group>
 	</sp-dialog>
 
 </body>
-
 </html>
