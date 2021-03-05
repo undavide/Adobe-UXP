@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import Preferences from "../components/Preferences"
 import uxp from "uxp"
 
-
 const Dialogs = () => {
+
   let preferencesDialog = null;
 
   const openPreferences = async () => {
@@ -31,7 +31,10 @@ const Dialogs = () => {
     <div>
       <sp-heading>Dialog example in React</sp-heading>
       <sp-divider size="large" style={{ marginBottom: `10px` }}></sp-divider>
-      <sp-body>Two different ways to create modal dialogs.<br />Please note that Spectrum Dialogs API is still a work in progress.</sp-body>
+      <sp-body>
+        Some dummy Preferences dialog.<br />
+        
+      </sp-body>
 
       <div className="row" style={{ margin: `20px`, justifyContent: `space-around` }}>
         <sp-action-button onClick={openPreferences} width="160">
